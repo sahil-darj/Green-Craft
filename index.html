@@ -4816,8 +4816,13 @@
         /* Extra small devices (up to 375px) */
         @media (max-width: 375px) {
             .hero-text h1 {
-                font-size: 1.7rem;
-                line-height: 1.2;
+                font-size: 1.4rem !important;
+                line-height: 1.2 !important;
+                word-wrap: break-word;
+            }
+
+            .section-title {
+                font-size: 1.4rem !important;
             }
 
             .section-tag {
@@ -4825,9 +4830,6 @@
                 padding: 0.4rem 1.2rem;
             }
 
-            .section-title {
-                font-size: 1.5rem;
-            }
 
             .company-intro-text h2,
             .about-intro-text h2 {
@@ -4913,53 +4915,7 @@
 
 
 
-        /* Fix for timeline on mobile */
-        @media (max-width: 767px) {
-            .timeline {
-                padding-left: 0;
-            }
 
-            .timeline-item {
-                padding-left: 85px;
-                /* Increased to prevent overlap */
-                margin-bottom: 3rem;
-            }
-
-            .timeline::before {
-                left: 25px;
-            }
-
-            .timeline-dot {
-                left: 25px;
-            }
-
-            .timeline-year {
-                left: 10px;
-                /* Shifted left */
-                padding: 0.4rem 0.8rem;
-                font-size: 0.9rem;
-            }
-
-            .timeline-content {
-                padding: 1.5rem;
-            }
-
-            .timeline-content h3 {
-                font-size: 1.5rem;
-            }
-
-            .timeline-content p {
-                font-size: 1rem;
-            }
-
-            .timeline-icon {
-                width: 50px;
-                height: 50px;
-                font-size: 1.5rem;
-                top: -20px;
-                right: 20px;
-            }
-        }
 
         /* Fix for modals on mobile */
         @media (max-width: 575px) {
@@ -5057,8 +5013,43 @@
             }
         }
 
-        /* Mobile — all screens below 575px */
-        @media (max-width: 575px) {
+        /* Mobile — all screens below 600px */
+        @media (max-width: 600px) {
+
+            /* Timeline Fix Re-integrated and Aggressive */
+            .timeline {
+                padding-left: 0 !important;
+            }
+
+            .timeline-item {
+                padding-left: 80px !important;
+                margin-bottom: 3rem !important;
+                justify-content: flex-start !important;
+            }
+
+            .timeline::before {
+                left: 25px !important;
+            }
+
+            .timeline-dot {
+                left: 25px !important;
+            }
+
+            .timeline-year {
+                left: 5px !important;
+                padding: 0.4rem 0.6rem !important;
+                font-size: 0.85rem !important;
+            }
+
+            .timeline-content {
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 1.5rem !important;
+            }
+
+            .timeline-content h3 {
+                font-size: 1.3rem !important;
+            }
 
             /* Ensure nothing overflows viewport */
             * {
@@ -5078,6 +5069,16 @@
 
             .hero-text {
                 text-align: center;
+                padding: 0 1rem;
+            }
+
+            .hero-text h1 {
+                font-size: 1.6rem !important;
+                line-height: 1.3 !important;
+            }
+
+            .section-title {
+                font-size: 1.6rem !important;
             }
 
             .hero-visual {
@@ -5098,11 +5099,16 @@
             .contact-info-card,
             .contact-form-card,
             .quote-form-card {
-                padding: 1.25rem;
-                /* Tighter padding for mobile */
+                padding: 1.5rem !important;
                 border-radius: 16px;
-                width: 100%;
-                margin: 0 auto;
+                width: 100% !important;
+                margin: 0 !important;
+                box-sizing: border-box !important;
+            }
+
+            .contact-info-card h3 {
+                font-size: 1.5rem !important;
+                margin-bottom: 1.5rem !important;
             }
 
             .form-group input,
@@ -5125,12 +5131,13 @@
             }
 
             .quote-modal-content {
-                width: 100%;
-                border-radius: 20px 20px 0 0;
-                max-height: 92vh;
-                overflow-y: auto;
+                width: 100% !important;
+                border-radius: 24px 24px 0 0 !important;
+                max-height: 94vh !important;
+                overflow-y: auto !important;
                 -webkit-overflow-scrolling: touch;
-                padding-top: 1rem;
+                padding: 3rem 0 1rem 0 !important;
+                /* Space for close button */
             }
 
             .quote-form-card {
