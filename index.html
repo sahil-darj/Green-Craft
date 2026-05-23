@@ -2056,13 +2056,15 @@
         }
 
         .timeline-item:nth-child(odd) .timeline-content {
-            margin-left: auto;
-            margin-right: 3rem;
+            margin-left: calc(50% + 2.5rem);
+            /* Perfectly on the RIGHT */
+            margin-right: auto;
         }
 
         .timeline-item:nth-child(even) .timeline-content {
-            margin-right: auto;
-            margin-left: 3rem;
+            margin-right: calc(50% + 2.5rem);
+            /* Perfectly on the LEFT */
+            margin-left: auto;
         }
 
         .timeline-dot {
@@ -4814,7 +4816,8 @@
         /* Extra small devices (up to 375px) */
         @media (max-width: 375px) {
             .hero-text h1 {
-                font-size: 1.75rem;
+                font-size: 1.7rem;
+                line-height: 1.2;
             }
 
             .section-tag {
@@ -4885,6 +4888,31 @@
             }
         }
 
+        /* Better Alternating Timeline for Tablet */
+        @media (min-width: 768px) and (max-width: 1199px) {
+            .timeline-content {
+                width: 44%;
+                padding: 1.5rem;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-content {
+                margin-left: calc(50% + 1.5rem);
+                margin-right: auto;
+            }
+
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-right: calc(50% + 1.5rem);
+                margin-left: auto;
+            }
+
+            .timeline-year {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+        }
+
+
+
         /* Fix for timeline on mobile */
         @media (max-width: 767px) {
             .timeline {
@@ -4892,25 +4920,28 @@
             }
 
             .timeline-item {
-                padding-left: 60px;
+                padding-left: 85px;
+                /* Increased to prevent overlap */
+                margin-bottom: 3rem;
             }
 
             .timeline::before {
-                left: 20px;
+                left: 25px;
             }
 
             .timeline-dot {
-                left: 20px;
+                left: 25px;
             }
 
             .timeline-year {
-                left: 20px;
-                padding: 0.5rem 1rem;
-                font-size: 1rem;
+                left: 10px;
+                /* Shifted left */
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
             }
 
             .timeline-content {
-                padding: 2rem;
+                padding: 1.5rem;
             }
 
             .timeline-content h3 {
@@ -5067,8 +5098,11 @@
             .contact-info-card,
             .contact-form-card,
             .quote-form-card {
-                padding: 1.5rem;
+                padding: 1.25rem;
+                /* Tighter padding for mobile */
                 border-radius: 16px;
+                width: 100%;
+                margin: 0 auto;
             }
 
             .form-group input,
@@ -5093,9 +5127,20 @@
             .quote-modal-content {
                 width: 100%;
                 border-radius: 20px 20px 0 0;
-                max-height: 90vh;
+                max-height: 92vh;
                 overflow-y: auto;
                 -webkit-overflow-scrolling: touch;
+                padding-top: 1rem;
+            }
+
+            .quote-form-card {
+                padding: 1rem 1.5rem;
+            }
+
+            .quote-form-card h3 {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+                text-align: center;
             }
 
             /* About page */
