@@ -5288,11 +5288,13 @@
             }
 
             body .timeline-item {
-                padding-left: 70px !important;
+                padding-left: 65px !important;
+                padding-right: 15px !important;
                 margin: 0 0 3rem 0 !important;
                 display: block !important;
                 width: 100% !important;
                 position: relative !important;
+                box-sizing: border-box !important;
             }
 
             body .timeline::before {
@@ -5313,7 +5315,8 @@
             }
 
             body .timeline-content {
-                width: 100% !important;
+                width: auto !important;
+                max-width: 100% !important;
                 margin: 0 !important;
                 padding: 1.25rem !important;
                 box-sizing: border-box !important;
