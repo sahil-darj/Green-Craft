@@ -5013,237 +5013,7 @@
             }
         }
 
-        /* Mobile — all screens below 600px */
-        @media (max-width: 600px) {
 
-            /* Timeline Fix Re-integrated and Aggressive */
-            .timeline {
-                padding-left: 0 !important;
-            }
-
-            .timeline-item {
-                padding-left: 80px !important;
-                margin-bottom: 3rem !important;
-                justify-content: flex-start !important;
-            }
-
-            .timeline::before {
-                left: 25px !important;
-            }
-
-            .timeline-dot {
-                left: 25px !important;
-            }
-
-            .timeline-year {
-                left: 5px !important;
-                padding: 0.4rem 0.6rem !important;
-                font-size: 0.85rem !important;
-            }
-
-            .timeline-content {
-                width: 100% !important;
-                margin: 0 !important;
-                padding: 1.5rem !important;
-            }
-
-            .timeline-content h3 {
-                font-size: 1.3rem !important;
-            }
-
-            /* Ensure nothing overflows viewport */
-            * {
-                max-width: 100%;
-                box-sizing: border-box;
-            }
-
-            body {
-                overflow-x: hidden;
-            }
-
-            /* Hero */
-            .hero-section {
-                min-height: 90vh;
-                padding: 5rem 0 3rem;
-            }
-
-            .hero-text {
-                text-align: center;
-                padding: 0 1rem;
-            }
-
-            .hero-text h1 {
-                font-size: 1.6rem !important;
-                line-height: 1.3 !important;
-            }
-
-            .section-title {
-                font-size: 1.6rem !important;
-            }
-
-            .hero-visual {
-                display: none;
-            }
-
-            .hero-stats {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1rem;
-            }
-
-            /* Contact Form */
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .contact-info-card,
-            .contact-form-card,
-            .quote-form-card {
-                padding: 1.5rem !important;
-                border-radius: 16px;
-                width: 100% !important;
-                margin: 0 !important;
-                box-sizing: border-box !important;
-            }
-
-            .contact-info-card h3 {
-                font-size: 1.5rem !important;
-                margin-bottom: 1.5rem !important;
-            }
-
-            .form-group input,
-            .form-group textarea,
-            .form-group select {
-                font-size: 1rem;
-                padding: 0.85rem 1rem;
-            }
-
-            .form-submit-btn,
-            .quote-submit-btn {
-                width: 100%;
-                justify-content: center;
-            }
-
-            /* Quote Modal */
-            .quote-modal-overlay {
-                padding: 0;
-                align-items: flex-end;
-            }
-
-            .quote-modal-content {
-                width: 100% !important;
-                border-radius: 24px 24px 0 0 !important;
-                max-height: 94vh !important;
-                overflow-y: auto !important;
-                -webkit-overflow-scrolling: touch;
-                padding: 3rem 0 1rem 0 !important;
-                /* Space for close button */
-            }
-
-            .quote-form-card {
-                padding: 1rem 1.5rem;
-            }
-
-            .quote-form-card h3 {
-                font-size: 1.5rem;
-                margin-bottom: 1.5rem;
-                text-align: center;
-            }
-
-            /* About page */
-            .about-intro-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .about-intro-image {
-                height: 260px;
-            }
-
-            /* Section headers tighter */
-            .section-header {
-                margin-bottom: 2rem;
-            }
-
-            .section-tag {
-                font-size: 0.7rem;
-                padding: 0.4rem 1rem;
-            }
-
-            /* Footer single column */
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-                text-align: center;
-            }
-
-            .footer-logo,
-            .social-links {
-                justify-content: center;
-            }
-
-            .footer-links {
-                align-items: center;
-            }
-
-            /* Why choose section */
-            .why-choose-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            /* Owner section */
-            .owner-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .owner-achievements {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            /* Company intro / About */
-            .company-intro-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .company-intro-image,
-            .about-intro-image {
-                height: 260px;
-                order: -1;
-            }
-
-            /* Gallery grid single col on mobile */
-            .gallery-grid {
-                grid-template-columns: 1fr;
-                gap: 1.25rem;
-            }
-
-            /* Service cards */
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            /* Product filter scrollable */
-            .products-filter {
-                display: flex;
-                overflow-x: auto;
-                flex-wrap: nowrap;
-                gap: 0.5rem;
-                padding-bottom: 1rem;
-                -webkit-overflow-scrolling: touch;
-                scrollbar-width: none;
-            }
-
-            .products-filter::-webkit-scrollbar {
-                display: none;
-            }
-
-            .filter-btn {
-                flex-shrink: 0;
-                white-space: nowrap;
-            }
-        }
 
         /* ===== Hero Cinematic 3D Word Cascade ===== */
         #hero-title {
@@ -5356,6 +5126,109 @@
                 transform 0.45s cubic-bezier(0.55, 0, 1, 0.45),
                 filter 0.45s cubic-bezier(0.55, 0, 1, 0.45);
             animation: none !important;
+        }
+
+        /* ===== ULTIMATE MOBILE FIXES (Forced Priority) ===== */
+        @media screen and (max-width: 1024px) {
+            .timeline-content {
+                width: 44%;
+                padding: 1.5rem;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-content {
+                margin-left: calc(50% + 1.5rem);
+            }
+
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-right: calc(50% + 1.5rem);
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            * {
+                max-width: 100vw !important;
+                box-sizing: border-box !important;
+            }
+
+            html,
+            body {
+                overflow-x: hidden !important;
+                width: 100vw !important;
+            }
+
+            /* Hero Title Fix */
+            body .hero-text h1,
+            body .hero-text h1 span,
+            body #hero-title,
+            body #hero-title .hero-word {
+                font-size: 1.5rem !important;
+                line-height: 1.3 !important;
+                word-break: break-word !important;
+                white-space: normal !important;
+            }
+
+            /* Timeline Fix */
+            body .timeline {
+                padding-left: 0 !important;
+                margin-left: 0 !important;
+            }
+
+            body .timeline-item {
+                padding-left: 80px !important;
+                margin-bottom: 2.5rem !important;
+                justify-content: flex-start !important;
+                width: 100% !important;
+                display: block !important;
+            }
+
+            body .timeline::before {
+                left: 30px !important;
+            }
+
+            body .timeline-dot {
+                left: 30px !important;
+            }
+
+            body .timeline-year {
+                left: 10px !important;
+                transform: translateY(-50%) !important;
+                padding: 0.4rem 0.6rem !important;
+                font-size: 0.85rem !important;
+            }
+
+            body .timeline-content {
+                width: calc(100% - 20px) !important;
+                margin: 0 !important;
+                padding: 1.25rem !important;
+            }
+
+            /* Contact Card Fix */
+            body .contact-grid {
+                display: block !important;
+                width: 100% !important;
+                padding: 0 1rem !important;
+            }
+
+            body .contact-info-card,
+            body .contact-form-card,
+            body .quote-form-card {
+                width: 100% !important;
+                margin: 0 0 2rem 0 !important;
+                padding: 1.5rem !important;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+            }
+
+            /* Modal Close Button Fix */
+            body .quote-modal-content {
+                padding-top: 4rem !important;
+                border-radius: 24px 24px 0 0 !important;
+            }
+
+            body .close-modal {
+                top: 1.5rem !important;
+                right: 1.5rem !important;
+                z-index: 100 !important;
+            }
         }
     </style>
 </head>
