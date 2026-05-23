@@ -5323,7 +5323,8 @@
                 word-break: break-word !important;
                 overflow-wrap: break-word !important;
                 display: block !important;
-                overflow: hidden !important;
+                overflow: visible !important;
+                position: relative !important;
             }
 
             body .timeline-content h3 {
@@ -5338,10 +5339,11 @@
             body .timeline-icon {
                 width: 40px !important;
                 height: 40px !important;
-                font-size: 1.1rem !important;
-                top: -15px !important;
-                right: 15px !important;
+                font-size: 1rem !important;
+                top: -20px !important;
+                right: 10px !important;
                 left: auto !important;
+                z-index: 50 !important;
             }
 
             /* Contact Card Force - Centered */
