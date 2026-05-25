@@ -418,12 +418,16 @@
             color: var(--white);
             opacity: 0;
             visibility: hidden;
+            pointer-events: none;
+            transform: translateY(12px) scale(0.92);
             transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
         }
 
         .back-to-top-btn.visible {
             opacity: 1;
             visibility: visible;
+            pointer-events: auto;
+            transform: translateY(0) scale(1);
         }
 
         .back-to-top-btn:hover {
@@ -6561,6 +6565,578 @@
             opacity: 1 !important;
         }
 
+        /* Restore original image banner backgrounds on inner pages */
+        #about .about-header {
+            background: linear-gradient(rgba(24, 34, 29, 0.62), rgba(47, 125, 70, 0.42)), url("./src/bgImage02.webp") center / cover no-repeat !important;
+            min-height: 60vh !important;
+            padding: 8rem 2rem 6rem !important;
+            color: #ffffff !important;
+        }
+
+        #services .about-header {
+            background: linear-gradient(rgba(24, 34, 29, 0.62), rgba(47, 125, 70, 0.42)), url("./src/bgImage02.webp") center / cover no-repeat !important;
+            min-height: 60vh !important;
+            padding: 8rem 2rem 6rem !important;
+            color: #ffffff !important;
+        }
+
+        #products .products-header {
+            background: linear-gradient(rgba(24, 34, 29, 0.62), rgba(47, 125, 70, 0.42)), url("./src/bgImage03.jpg") center / cover no-repeat !important;
+            min-height: 60vh !important;
+            padding: 8rem 2rem 6rem !important;
+            color: #ffffff !important;
+        }
+
+        #gallery .gallery-header {
+            background: linear-gradient(rgba(24, 34, 29, 0.62), rgba(47, 125, 70, 0.42)), url("./src/bgImage04.webp") center / cover no-repeat !important;
+            min-height: 60vh !important;
+            padding: 8rem 2rem 6rem !important;
+            color: #ffffff !important;
+        }
+
+        #contact .contact-header {
+            background: linear-gradient(rgba(24, 34, 29, 0.62), rgba(47, 125, 70, 0.42)), url("./src/logo.png") center / contain no-repeat #ffffff !important;
+            min-height: 60vh !important;
+            padding: 8rem 2rem 6rem !important;
+            color: #ffffff !important;
+        }
+
+        #about .about-header h1,
+        #services .about-header h1,
+        #products .products-header h1,
+        #gallery .gallery-header h1,
+        #contact .contact-header h1 {
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+            text-shadow: 0 4px 18px rgba(0, 0, 0, 0.35) !important;
+        }
+
+        #about .about-header p,
+        #services .about-header p,
+        #products .products-header p,
+        #gallery .gallery-header p,
+        #contact .contact-header p {
+            color: #f3fbf5 !important;
+            -webkit-text-fill-color: #f3fbf5 !important;
+            text-shadow: 0 3px 14px rgba(0, 0, 0, 0.32) !important;
+        }
+
+        /* Keep hero number cards fixed on hover */
+        .hero-card,
+        .hero-card:hover,
+        .hero-stats,
+        .hero-stats:hover,
+        .hero-stats .stat-item,
+        .hero-stats .stat-item:hover,
+        .hero-stats .counter,
+        .hero-stats .counter:hover,
+        .hero-stats .stat-label,
+        .hero-stats .stat-label:hover {
+            transform: none !important;
+            scale: 1 !important;
+            translate: none !important;
+            animation: none !important;
+        }
+
+        .hero-stats .stat-item {
+            min-height: 120px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            overflow: hidden !important;
+            transition: box-shadow 0.2s ease, background-color 0.2s ease !important;
+        }
+
+        .hero-stats .counter {
+            display: block !important;
+            width: 100% !important;
+            min-height: 58px !important;
+            line-height: 1.05 !important;
+            text-align: center !important;
+        }
+
+        /* Perfect modal form fields and icon visibility */
+        .quote-modal-content {
+            background: #ffffff !important;
+            border: 1px solid rgba(143, 209, 158, 0.34) !important;
+            box-shadow: 0 28px 80px rgba(15, 23, 42, 0.28) !important;
+        }
+
+        .qp-form-grid {
+            gap: 0.8rem 0.9rem !important;
+        }
+
+        .qp-field-group {
+            background: #f8fbf9 !important;
+            border: 1px solid rgba(143, 209, 158, 0.42) !important;
+            border-radius: 12px !important;
+            min-height: 68px !important;
+            padding: 0.7rem 0.85rem !important;
+            display: grid !important;
+            grid-template-columns: 28px 1fr !important;
+            align-items: center !important;
+            column-gap: 0.8rem !important;
+            box-shadow: 0 6px 18px rgba(119, 130, 122, 0.08) !important;
+        }
+
+        .qp-field-group-textarea {
+            align-items: start !important;
+            min-height: 124px !important;
+        }
+
+        .qp-field-icon,
+        .qp-icon-box {
+            width: 28px !important;
+            min-width: 28px !important;
+            height: 28px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            color: #4f9562 !important;
+            -webkit-text-fill-color: #4f9562 !important;
+            opacity: 1 !important;
+            filter: none !important;
+        }
+
+        .qp-field-icon i,
+        .qp-icon-box i {
+            color: #4f9562 !important;
+            -webkit-text-fill-color: #4f9562 !important;
+            font-size: 1.05rem !important;
+            line-height: 1 !important;
+            opacity: 1 !important;
+        }
+
+        .qp-input-wrapper {
+            min-width: 0 !important;
+            width: 100% !important;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 0.32rem !important;
+        }
+
+        .qp-input-wrapper label {
+            color: #35423b !important;
+            -webkit-text-fill-color: #35423b !important;
+            font-size: 0.78rem !important;
+            font-weight: 800 !important;
+            line-height: 1.1 !important;
+            margin: 0 !important;
+        }
+
+        .qp-input-wrapper input,
+        .qp-input-wrapper textarea,
+        .quote-modal-content input,
+        .quote-modal-content textarea {
+            width: 100% !important;
+            min-height: 42px !important;
+            padding: 0.72rem 0.85rem !important;
+            border: 1.5px solid rgba(143, 209, 158, 0.62) !important;
+            border-radius: 8px !important;
+            background: #ffffff !important;
+            color: #26332d !important;
+            -webkit-text-fill-color: #26332d !important;
+            font-family: 'Montserrat', 'Inter', sans-serif !important;
+            font-size: 0.9rem !important;
+            font-weight: 600 !important;
+            line-height: 1.35 !important;
+            outline: none !important;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+            appearance: none !important;
+            -webkit-appearance: none !important;
+        }
+
+        .qp-input-wrapper textarea,
+        .quote-modal-content textarea {
+            min-height: 88px !important;
+            resize: vertical !important;
+        }
+
+        .qp-input-wrapper input::placeholder,
+        .qp-input-wrapper textarea::placeholder {
+            color: #6f7a73 !important;
+            -webkit-text-fill-color: #6f7a73 !important;
+            opacity: 1 !important;
+            font-weight: 500 !important;
+        }
+
+        .qp-field-group:focus-within {
+            border-color: #75bf83 !important;
+            background: #ffffff !important;
+            box-shadow: 0 0 0 4px rgba(117, 191, 131, 0.14), 0 10px 26px rgba(95, 168, 111, 0.12) !important;
+        }
+
+        .qp-input-wrapper input:focus,
+        .qp-input-wrapper textarea:focus {
+            border-color: #4f9562 !important;
+            box-shadow: 0 0 0 3px rgba(117, 191, 131, 0.16) !important;
+        }
+
+        .qp-submit-btn,
+        .modal-actions button,
+        .modal-actions .btn-call,
+        .modal-actions .btn-whatsapp,
+        .modal-actions .btn-enquiry {
+            min-height: 46px !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 0.55rem !important;
+            background: #75bf83 !important;
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+            border: 1px solid #75bf83 !important;
+            border-radius: 10px !important;
+            font-weight: 900 !important;
+            letter-spacing: 0.04em !important;
+            box-shadow: 0 10px 22px rgba(95, 168, 111, 0.26) !important;
+        }
+
+        .qp-submit-btn i,
+        .modal-actions button i,
+        .modal-actions .btn-call i,
+        .modal-actions .btn-whatsapp i,
+        .modal-actions .btn-enquiry i,
+        #pdmCallBtn i,
+        #pdmWaBtn i,
+        #pdmEnquiryBtn i {
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+            opacity: 1 !important;
+            font-size: 0.95rem !important;
+            line-height: 1 !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            filter: none !important;
+        }
+
+        .glb-close,
+        #quoteModalClose,
+        #productModal .modal-close {
+            background: #75bf83 !important;
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+            border: 1px solid #75bf83 !important;
+            box-shadow: 0 10px 26px rgba(95, 168, 111, 0.28) !important;
+        }
+
+        .glb-close i,
+        #quoteModalClose i,
+        #productModal .modal-close i {
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+            opacity: 1 !important;
+            font-size: 1rem !important;
+            line-height: 1 !important;
+        }
+
+        .pdm-section-label i,
+        .pdm-feat-icon i,
+        .pdm-related-title i,
+        .chip-label,
+        .chip-val {
+            opacity: 1 !important;
+            filter: none !important;
+        }
+
+        .pdm-feat-icon,
+        .pdm-spec-chip .label-icon {
+            background: rgba(117, 191, 131, 0.18) !important;
+            color: #2f7d46 !important;
+            -webkit-text-fill-color: #2f7d46 !important;
+        }
+
+        .pdm-feat-icon i,
+        .pdm-section-label i,
+        .pdm-related-title i {
+            color: #2f7d46 !important;
+            -webkit-text-fill-color: #2f7d46 !important;
+        }
+
+        @media (max-width: 768px) {
+            .qp-field-group {
+                grid-template-columns: 26px 1fr !important;
+                padding: 0.65rem 0.75rem !important;
+            }
+
+            .qp-input-wrapper input,
+            .qp-input-wrapper textarea {
+                font-size: 0.85rem !important;
+            }
+        }
+
+        /* Keep modal button text bright */
+        .qp-submit-btn span,
+        .qp-submit-btn #quoteSubmitText,
+        .modal-actions button span,
+        .modal-actions .btn-call span,
+        .modal-actions .btn-whatsapp span,
+        .modal-actions .btn-enquiry span,
+        #pdmCallBtn,
+        #pdmWaBtn,
+        #pdmEnquiryBtn {
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+            opacity: 1 !important;
+        }
+
+        /* Center quote modal header icon */
+        .qp-header .qp-icon-box {
+            width: 44px !important;
+            min-width: 44px !important;
+            height: 44px !important;
+            margin: 0 auto 0.35rem !important;
+            border-radius: 50% !important;
+            background: #e2f3e6 !important;
+            color: #2f7d46 !important;
+            -webkit-text-fill-color: #2f7d46 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            box-shadow: 0 8px 20px rgba(95, 168, 111, 0.16) !important;
+        }
+
+        .qp-header .qp-icon-box i {
+            color: #2f7d46 !important;
+            -webkit-text-fill-color: #2f7d46 !important;
+            font-size: 1.1rem !important;
+        }
+
+        /* Site-wide icon visibility cleanup */
+        i,
+        .fa,
+        .fas,
+        .far,
+        .fab,
+        [class^="fa-"],
+        [class*=" fa-"] {
+            opacity: 1 !important;
+            visibility: visible !important;
+            filter: none !important;
+            text-shadow: none !important;
+            line-height: 1 !important;
+            color: #2f7d46 !important;
+            -webkit-text-fill-color: #2f7d46 !important;
+        }
+
+        .contact-icon,
+        .service-icon,
+        .feature-icon,
+        .stat-icon,
+        .glb-feat-icon,
+        .pdm-feat-icon,
+        .qp-field-icon,
+        .qp-icon-box,
+        .social-link,
+        .floating-btn,
+        .product-badge,
+        .section-tag {
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            overflow: visible !important;
+        }
+
+        .contact-icon i,
+        .service-icon i,
+        .feature-icon i,
+        .stat-icon i,
+        .glb-feat-icon i,
+        .pdm-feat-icon i,
+        .qp-field-icon i,
+        .qp-icon-box i,
+        .label-icon i,
+        .pdm-section-label i,
+        .pdm-related-title i,
+        .contact-details i,
+        .social-link i {
+            color: #2f7d46 !important;
+            -webkit-text-fill-color: #2f7d46 !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+
+        .btn i,
+        button i,
+        .submit-btn i,
+        .qp-submit-btn i,
+        .floating-btn i,
+        .whatsapp-btn i,
+        .back-to-top-btn i,
+        .modal-close i,
+        .glb-close i,
+        #quoteModalClose i,
+        #productModal .modal-close i,
+        .modal-actions i,
+        .btn-call i,
+        .btn-whatsapp i,
+        .btn-enquiry i,
+        #pdmCallBtn i,
+        #pdmWaBtn i,
+        #pdmEnquiryBtn i,
+        .section-tag i,
+        .product-badge i,
+        .badge i {
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+
+        .filter-btn:not(.active) i,
+        .btn-secondary i,
+        .hero-text .btn-secondary i,
+        .cta-buttons .btn-secondary i {
+            color: #2f7d46 !important;
+            -webkit-text-fill-color: #2f7d46 !important;
+        }
+
+        .contact-icon,
+        .service-icon,
+        .feature-icon,
+        .stat-icon,
+        .pdm-feat-icon,
+        .glb-feat-icon,
+        .qp-icon-box,
+        .qp-field-icon {
+            background: rgba(117, 191, 131, 0.16) !important;
+            color: #2f7d46 !important;
+            -webkit-text-fill-color: #2f7d46 !important;
+            border-color: rgba(117, 191, 131, 0.34) !important;
+        }
+
+        .floating-btn,
+        .whatsapp-btn,
+        .back-to-top-btn,
+        .modal-close,
+        .glb-close,
+        #quoteModalClose,
+        #productModal .modal-close {
+            background: #75bf83 !important;
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+        }
+
+        .floating-btn i,
+        .whatsapp-btn i,
+        .back-to-top-btn i {
+            font-size: 1.25rem !important;
+        }
+
+        .contact-icon i,
+        .service-icon i,
+        .feature-icon i,
+        .stat-icon i {
+            font-size: 1.35rem !important;
+        }
+
+        .qp-field-icon i,
+        .pdm-feat-icon i,
+        .glb-feat-icon i {
+            font-size: 1rem !important;
+        }
+
+        .modal-actions i,
+        .qp-submit-btn i,
+        .btn i,
+        button i {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            min-width: 1em !important;
+        }
+
+        /* Product card wave design restored in light green / grey / white combo */
+        .product-card {
+            --top-bg: #e2f3e6 !important;
+            --bottom-bg: #ffffff !important;
+            --top-text: #2f7d46 !important;
+            --bottom-text: #35423b !important;
+            --btn-border: rgba(117, 191, 131, 0.45) !important;
+            background: #ffffff !important;
+            border: 1px solid rgba(143, 209, 158, 0.38) !important;
+            box-shadow: 0 18px 42px rgba(119, 130, 122, 0.14) !important;
+        }
+
+        .product-card:nth-child(even) {
+            --top-bg: #ffffff !important;
+            --bottom-bg: #e2f3e6 !important;
+            --top-text: #2f7d46 !important;
+            --bottom-text: #35423b !important;
+        }
+
+        .product-card-top {
+            background: var(--top-bg) !important;
+            height: 82% !important;
+        }
+
+        .product-card:nth-child(odd) .product-card-top {
+            background: linear-gradient(145deg, #e2f3e6 0%, #f7fbf8 100%) !important;
+        }
+
+        .product-card:nth-child(even) .product-card-top {
+            background: linear-gradient(145deg, #ffffff 0%, #f7fbf8 100%) !important;
+        }
+
+        .product-card-body {
+            height: 18% !important;
+            background: var(--bottom-bg) !important;
+            border-top: 0 !important;
+        }
+
+        .card-wave-divider {
+            display: block !important;
+            position: absolute !important;
+            bottom: -1px !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 92px !important;
+            background-repeat: no-repeat !important;
+            background-size: 100% 100% !important;
+            background-position: bottom center !important;
+            z-index: 6 !important;
+            opacity: 1 !important;
+            pointer-events: none !important;
+        }
+
+        .product-card:nth-child(odd) .card-wave-divider {
+            background-color: transparent !important;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320' preserveAspectRatio='none'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0,192L48,202.7C96,213,192,235,288,229.3C384,224,480,192,576,170.7C672,149,768,139,864,165.3C960,192,1056,256,1152,256C1248,256,1344,192,1392,160L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E") !important;
+        }
+
+        .product-card:nth-child(even) .card-wave-divider {
+            background-color: transparent !important;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320' preserveAspectRatio='none'%3E%3Cpath fill='%23e2f3e6' fill-opacity='1' d='M0,192L48,202.7C96,213,192,235,288,229.3C384,224,480,192,576,170.7C672,149,768,139,864,165.3C960,192,1056,256,1152,256C1248,256,1344,192,1392,160L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E") !important;
+        }
+
+        .exact-card-title {
+            color: #26332d !important;
+            -webkit-text-fill-color: #26332d !important;
+        }
+
+        .exact-card-desc,
+        .product-card-content p {
+            color: #64706a !important;
+            -webkit-text-fill-color: #64706a !important;
+            opacity: 1 !important;
+        }
+
+        .exact-divider-line,
+        .exact-divider-dot {
+            background: #75bf83 !important;
+        }
+
+        .product-pill-badge {
+            background: rgba(255, 255, 255, 0.72) !important;
+            color: #2f7d46 !important;
+            -webkit-text-fill-color: #2f7d46 !important;
+            border: 1px solid rgba(117, 191, 131, 0.45) !important;
+        }
+
         /* Hero original background restore */
         .hero-section {
             background: url("./src/bgImage01.png") center / cover no-repeat !important;
@@ -8223,12 +8799,17 @@
                 document.documentElement.scrollTop || 0,
                 document.body.scrollTop || 0
             );
+            const showBackToTopAfter = 420;
 
             if (scrollTop > 100) {
                 navbar.classList.add('scrolled');
-                backToTop.classList.add('visible');
             } else {
                 navbar.classList.remove('scrolled');
+            }
+
+            if (scrollTop > showBackToTopAfter) {
+                backToTop.classList.add('visible');
+            } else {
                 backToTop.classList.remove('visible');
             }
         }
